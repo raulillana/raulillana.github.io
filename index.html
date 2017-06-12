@@ -17,14 +17,14 @@
 body { font:normal 62.5% 'Helvetica Neue', Helvetica, Verdana, Sans-serif; }
 body.sexy { background:#e1e1e1; }
 
-h3 { font-weight:normal; }
+h3 { font-weight:normal; font-size:3em; }
 ul { list-style-type: none; }
 
 .love { color:red; }
 
 #cabecera, #surf, #pie { font-size:1em; }
 
-#cabecera { position:absolute; top:50%; left:50%; margin-top:-130px; margin-left:-115px; }
+#cabecera { position:absolute; top:25%; left:50%; margin-top:-130px; margin-left:-115px; }
 #cabecera img { border-radius:200px; border:0px solid white; background:white; width:200px; height:250px; padding:0 30px 10px; }
 #cabecera p { width:540px; margin-left:-140px; bottom:-50px; font:bold 3em "Helvetica Neue", Helvetica, Arial, sans-serif; color:#888; }
 #cabecera h1 { width:500px; margin-left:-110px; top:75px; font:bold 10em "MOB", "Helvetica Neue", Helvetica, Arial, sans-serif; color:white;
@@ -71,15 +71,18 @@ a.icon.youtube:hover { background-position:840px -84px; }
 
 /**/
 #screen2 { display:none; }
-/**/
 
-.liveform li {
-    display: block;
-    padding: 9px;
-    border:1px solid #DDDDDD;
-    margin-bottom: 30px;
-    border-radius: 3px;
+#main { 
+    overflow: hidden;
+    clear: both;
+    position: absolute;
+    bottom: 25%;
 }
+
+.screen { width:80%; }
+.screen h3 { text-align:center; }
+.screen label { font-size:2em; }
+/**/
 
 .liveform li.c1,
 .liveform li.mc1,
@@ -87,7 +90,7 @@ a.icon.youtube:hover { background-position:840px -84px; }
 .liveform li.mc3,
 .liveform li.mc4,
 .liveform li.mc5,
-.liveform li.mc6 rrr{ float:left; }
+.liveform li.mc6 { float:left; }
 
 .liveform li.c2 { float:right; }
 
