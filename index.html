@@ -17,6 +17,9 @@
 body { font:normal 62.5% 'Helvetica Neue', Helvetica, Verdana, Sans-serif; }
 body.sexy { background:#e1e1e1; }
 
+h3 { font-weight:normal; }
+ul { list-style-type: none; }
+
 .love { color:red; }
 
 #cabecera, #surf, #pie { font-size:1em; }
@@ -35,19 +38,12 @@ body.sexy { background:#e1e1e1; }
 #cabecera h1, 
 #cabecera p { display:block; position:absolute; left:0; }
 
-#surf {}
-#surf ul {}
-#surf ul li {}
-
-#pie {}
-#pie p { display:none; }
-
 #social {}
 #social ul {}
 #social ul li {}
 #social ul li a { background-image:url('http://4.bp.blogspot.com/-Pe-J5S7YCa0/UdXsJoN7GLI/AAAAAAAAL68/ongZAtcNF1E/s1600/spice-social-gadget-sprite.png'); }
 
-a.icon { display:block; width:84px; height:84px; text-indent:-9999em; animate:background 1s linear;  }
+a.icon { display:block; width:84px; height:84px; text-indent:-9999em; animation:background 1s linear;  }
 
 a.icon.facebook { background-position:0 0; }
 a.icon.flickr { background-position:84px 0; }
@@ -72,6 +68,38 @@ a.icon.linkedin:hover { background-position:588px -84px; }
 a.icon.googleplus:hover { background-position:672px -84px; }
 a.icon.vimeo:hover { background-position:756px -84px; }
 a.icon.youtube:hover { background-position:840px -84px; }
+
+/**/
+#screen2 { display:none; }
+/**/
+
+.liveform li {
+    display: block;
+    padding: 9px;
+    border:1px solid #DDDDDD;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+.liveform li.c1,
+.liveform li.mc1,
+.liveform li.mc2,
+.liveform li.mc3,
+.liveform li.mc4,
+.liveform li.mc5,
+.liveform li.mc6 rrr{ float:left; }
+
+.liveform li.c2 { float:right; }
+
+.liveform li.c1,
+.liveform li.c2 { width:45%; }
+
+.liveform li.mc1,
+.liveform li.mc2,
+.liveform li.mc3,
+.liveform li.mc4,
+.liveform li.mc5,
+.liveform li.mc6 { width:31%; }
 </style>
 	
 	<!--<link rel="stylesheet" href="style.css">-->
@@ -82,30 +110,85 @@ a.icon.youtube:hover { background-position:840px -84px; }
 	<header id="cabecera">
 		<img src="http://d13pix9kaak6wt.cloudfront.net/avatar/users/r/a/u/raulillana_1386866985_19.png" alt="raul-illana" title="Raul Illana">
 		<h1><span>Raul</span><span>Illana</span></h1>
-		<p><span class="love">❤</span> Not Only a WordPress Develover <span class="love">❤</span></p>
+		<!--<p><span class="love">❤</span> Not Only a WordPress Develover <span class="love">❤</span></p>-->
 	</header>
 
-	<nav id="surf">
-		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</nav>
+	<section id="main">
+		
+		<div id="screen1">
+			<h3><strong>¡Hola!</strong> ☺️ ¿Nos conocemos?</h3>
+			<ul class="liveform">
+				<li class="c1">
+					<input type="radio" name="s1" value="si"> 
+					<label for="s1-si"> ¡Claro! 😁</label>
+				</li>
+				<li class="c2">
+					<input type="radio" name="s1" value="no"> 
+					<label for="s1-no"> Todavía no… 😉</label>
+				</li>
+			</ul>
+		</div><!-- #screen1 -->
+		
+		<div id="screen2">
+			<h3>Déjame saber de qué, anda… 🤓</h3>
+			<ul class="liveform">
+				<li class="mc1">
+					<input type="radio" name="s2" value="trabajo"> 
+					<label for="s2-trabajo"> Del trabajo</label>
+				</li>
+				<li class="mc2">
+					<input type="radio" name="s2" value="gaming"> 
+					<label for="name"> De algún juego</label>
+				</li>
+				<li class="mc3">
+					<input type="radio" name="s2" value="redes"> 
+					<label for="name"> De las redes sociales</label>
+				</li>
+				<li class="mc4">
+					<input type="radio" name="s2" value="fiesta"> 
+					<label for="name"> De fiesta</label>
+				</li>
+				<li class="mc5">
+					<input type="radio" name="s2" value="vida"> 
+					<label for="name"> De la vida</label>
+				</li>
+				<li class="mc6">
+					<input type="radio" name="s2" value="nada"> 
+					<label for="name"> ¿De nada?</label>
+				</li>
+			</ul>
+		</div><!-- #screen2 -->
+		
+	</section>
 
 	<footer id="pie">
-		<p>~ nos vemos en ~</p>
 		<nav id="social">
 			<ul>
 				<li><a class="icon twitter" href="http://twitter.com/raulillana" title="Twitter">Twitter</a></li>
 				<li><a class="icon facebook" href="http://fb.com/raulillana" title="Facebook">Facebook</a></li>
 				<li><a class="icon linkedin" href="http://www.linkedin.com/in/raulillana" title="LinkedIn">LinkedIn</a></li>
-				
 				<li><a class="icon googleplus" href="https://plus.google.com/+RaulIllana" title="Google+">Google+</a></li>
-				
+				<li><a class="icon youtube" href="https://youtube.com/raulillana" title="YouTube">YouTube</a></li>
 			</ul>
 		</nav>
 	</footer>
+	<script>
+		jQuery(document).ready(function($){
+			$('input[type=radio][name=s1]').change(function() {
+				if( this.value == 'si' )
+				{
+					$('#screen2').show();
+					$('#screen1').hide();
+				}
+				
+				if( this.value == 'si' )
+				{
+					$('#screen2').find('h3').text('Bueno, y ¿qué tre trae por aquí?');
+					$('#screen2').show();
+					$('#screen1').hide();
+				}
+			});
+		});
+	</script>
 </body>
 </html>
