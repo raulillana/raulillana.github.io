@@ -128,47 +128,66 @@ a.icon.youtube:hover { background-position:840px -84px; }
 
 		<div id="screen1" class="screen">
 			<h3><strong>¡Hola!</strong> ☺️ ¿Nos conocemos?</h3>
+
 			<ul class="liveform">
-				<li class="c1">
-					<input type="radio" name="s1" value="si">
-					<label for="s1"> ¡Claro que sí! 😁</label>
-				</li>
-				<li class="c2">
-					<input type="radio" name="s1" value="no">
-					<label for="s1"> Todavía no… 😉</label>
-				</li>
+				<li class="c1"><a id="s1-si" href="#">¡Claro que sí! 😁</a></li>
+				<li class="c2"><a id="s1-no" href="#">Todavía no… 😉</a></li>
 			</ul>
 		</div><!-- #screen1 -->
 
 		<div id="screen2" class="screen">
-			<h3>Déjame saber de qué, anda… 🤓</h3>
+			<h3>Bueno, y ¿qué te trae por aquí?</h3>
+
 			<ul class="liveform">
 				<li class="mc1">
-					<input type="radio" name="s2" value="trabajo">
-					<label for="s2"> Del trabajo</label>
+					<a id="s2-trabajo" href="#">Del trabajo</a>
 				</li>
 				<li class="mc2">
-					<input type="radio" name="s2" value="gaming">
-					<label for="s2"> De algún juego</label>
+					<a id="s2-juegos" href="#">De algún juego</a>
 				</li>
 				<li class="mc3">
-					<input type="radio" name="s2" value="redes">
-					<label for="s2"> De las redes sociales</label>
+					<a id="s2-redes" href="#">De las redes sociales</a>
 				</li>
 				<li class="mc4">
-					<input type="radio" name="s2" value="fiesta">
-					<label for="s2"> De fiesta</label>
+					<a id="s2-fiesta" href="#">De fiesta</a>
 				</li>
 				<li class="mc5">
-					<input type="radio" name="s2" value="vida">
-					<label for="s2"> De la vida</label>
+					<a id="s2-nada" href="#">De nada concreto</a>
 				</li>
 				<li class="mc6">
-					<input type="radio" name="s2" value="nada">
-					<label for="s2"> ¿De nada?</label>
+					<a id="s2-vida" href="#">De la vida o el amor</a>
 				</li>
 			</ul>
 		</div><!-- #screen2 -->
+
+		<div id="screen3" class="screen">
+			<h3>¿Ah sí? Entonces ya sabes qué poner aquí… 😁</h3>
+
+			<form name="friendzone-form" action="" method="POST">
+				<ul class="liveform">
+					<li class="c1">
+						<input id="friendzone" type="password" name="friendzone" placeholder="lalalala…">
+					</li>
+					<li class="c2"><button id="s3-sub" type="submit"></li>
+				</ul>
+			</form>
+		</div><!-- #screen3 -->
+
+		<div id="screen4" class="screen">
+			<h3>🤣 …PUTO <strong>RAMAN</strong>… 🤣 HOLA PRESIOSO 🤣</h3>
+
+			<ul class="liveform">
+				<li class="c1">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/qjazkgtcrms" frameborder="0" allowfullscreen></iframe>
+				</li>
+				<li class="c2">
+					<p>Maddimans, Maddimans, necesita volar.</p>
+					<p>Maddimans, Maddimans, te quiere violar.</p>
+					<p>Maddimans, Maddimans, no se volverá a casar.</p>
+					<p>Maddimans, Maddimans, en tu casa quiere estar.</p>
+				</li>
+			</ul>
+		</div><!-- #screen4 -->
 
 	</section>
 
@@ -187,19 +206,34 @@ a.icon.youtube:hover { background-position:840px -84px; }
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 	<script>
 		jQuery(document).ready(function($){
-			$('input[type=radio][name=s1]').change(function() {
-				if( this.value == 'si' )
+			/* S1 */
+			$('#s1-no').click(function(ev) {
+				ev.preventDefault();
+				$('#screen2').show();
+				$('#screen1').hide();
+			});
+			$('#s1-si').click(function(ev) {
+				ev.preventDefault();
+				$('#screen3').show();
+				$('#screen1').hide();
+			});
+			/* S2 */
+			/* S3 */
+			$('#s3-sub').click(function(ev){
+				ev.preventDefault();
+
+				if( $('#friendzone').val() == 'Mercenari0' )
 				{
-					$('#screen2').show();
-					$('#screen1').hide();
+					$(window).location == 'https://wpmercs.com/';
 				}
 
-				if( this.value == 'si' )
+				if( $('#friendzone').val() == 'maddimans' )
 				{
-					$('#screen2').find('h3').text('Bueno, y ¿qué te trae por aquí?');
-					$('#screen2').show();
-					$('#screen1').hide();
+					$('#screen4').show();
+					$('#screen3').hide();
 				}
+
+				if( $('#friendzone').val() == '' ) alert('No cuela… 😎');
 			});
 		});
 	</script>
