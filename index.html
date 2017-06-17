@@ -89,7 +89,7 @@ a.icon.youtube:hover { background-position:840px -84px; }
 
 #screen1 { display:block; }
 
-#screen2 .liveform li { text-align:center; padding:5px 10px; }
+#screen2 .liveform li { text-align:center; padding:10px; }
 
 #screen2,
 #screen3,
@@ -125,6 +125,7 @@ a.icon.youtube:hover { background-position:840px -84px; }
 .liveform li.mc5,
 .liveform li.mc6 { width:31%; }
 /**/
+#screen2 li a { padding-left:5px; }
 #screen2 li a:before {
 	display: inline-block;
 	font: normal normal normal 14px/1 FontAwesome;
@@ -133,9 +134,13 @@ a.icon.youtube:hover { background-position:840px -84px; }
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-#s2-trabajo:before {
-  content: "\f19a";
-}
+#s2-trabajo:before { content: '\f19a'; }
+#s2-fiesta:before{ content: '\f000'; }
+
+#s2-juegos:before{ content: '\f11b'; }
+#s2-redes:before{ content: '\f1e0'; }
+#s2-nada:before{ content: '\f06e'; }
+#s2-vida:before{ content: '\f004'; }
 /**/
 </style>
 
@@ -243,6 +248,13 @@ a.icon.youtube:hover { background-position:840px -84px; }
 				$('#screen1').slideToggle('slow', function(){ $('#screen3').slideToggle('slow'); });
 			});
 			/* S2 */
+			$('#s2-nada').click(function(ev){
+				ev.preventDefault();
+
+				alert('Igual deberías empezar el stalkeo por aquí…');
+
+				$(window).location == 'https://raulillana.com/';
+			});
 			/* S3 */
 			$('#s3-sub').click(function(ev){
 				ev.preventDefault();
