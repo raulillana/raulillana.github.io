@@ -9,6 +9,7 @@
 
 <style>
 @import url('https://reset5.googlecode.com/hg/reset.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 @font-face { font-family: MOB; src: url('master_of_break.otf') format('opentype'); }
 
@@ -122,6 +123,18 @@ a.icon.youtube:hover { background-position:840px -84px; }
 .liveform li.mc5,
 .liveform li.mc6 { width:31%; }
 /**/
+#screen2 li a {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+#s2-trabajo:before {
+  content: "\f19a";
+}
+/**/
 </style>
 
 	<!--<link rel="stylesheet" href="style.css">-->
@@ -232,17 +245,15 @@ a.icon.youtube:hover { background-position:840px -84px; }
 			$('#s3-sub').click(function(ev){
 				ev.preventDefault();
 
-				if( $('#friendzone').val() == 'Mercenari0' )
+				switch( $('#friendzone').val() )
 				{
-					$(window).location == 'https://wpmercs.com/';
+					case 'Mercenari0' : $(window).location == 'https://wpmercs.com/'; break;
+					case 'maddimans'  : $('#screen3').slideToggle('slow', function(){ $('#screen4').slideToggle('slow'); }); break;
+
+					case 'tequiero'   : alert('Y yo a ti. 😍');
+					case '' : default : alert('No cuela… 😎');
 				}
 
-				if( $('#friendzone').val() == 'maddimans' )
-				{
-					$('#screen3').slideToggle('slow', function(){ $('#screen4').slideToggle('slow'); });
-				}
-
-				if( $('#friendzone').val() == '' ) alert('No cuela… 😎');
 			});
 		});
 	</script>
