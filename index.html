@@ -6,7 +6,7 @@
 
 	<meta name="description" content="Desarrollador WordPress Barcelona">
 	<meta name="author" content="Raul Illana">
-	
+
 <style>
 @import url('http://reset5.googlecode.com/hg/reset.min.css');
 
@@ -28,14 +28,14 @@ ul { list-style-type: none; }
 #cabecera img { border-radius:200px; border:0px solid white; background:white; width:200px; height:250px; padding:0 30px 10px; }
 #cabecera p { width:540px; margin-left:-140px; bottom:-50px; font:bold 3em "Helvetica Neue", Helvetica, Arial, sans-serif; color:#888; }
 #cabecera h1 { width:500px; margin-left:-110px; top:75px; font:bold 10em "MOB", "Helvetica Neue", Helvetica, Arial, sans-serif; color:white;
-	text-shadow:0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 
-		0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 
+	text-shadow:0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1),
+		0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25),
 		0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15); }
 
 #cabecera h1 span:first-child { margin-left:-150px; }
 #cabecera h1 span:last-child { margin-left:400px; }
 
-#cabecera h1, 
+#cabecera h1,
 #cabecera p { display:block; position:absolute; left:0; }
 
 #social {}
@@ -72,7 +72,7 @@ a.icon.youtube:hover { background-position:840px -84px; }
 /**/
 #screen2 { display:none; }
 
-#main { 
+#main {
     overflow: hidden;
     clear: both;
     position: absolute;
@@ -104,7 +104,7 @@ a.icon.youtube:hover { background-position:840px -84px; }
 .liveform li.mc5,
 .liveform li.mc6 { width:31%; }
 </style>
-	
+
 	<!--<link rel="stylesheet" href="style.css">-->
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
@@ -117,51 +117,51 @@ a.icon.youtube:hover { background-position:840px -84px; }
 	</header>
 
 	<section id="main">
-		
-		<div id="screen1">
+
+		<div id="screen1" class="screen">
 			<h3><strong>¡Hola!</strong> ☺️ ¿Nos conocemos?</h3>
 			<ul class="liveform">
 				<li class="c1">
-					<input type="radio" name="s1" value="si"> 
-					<label for="s1-si"> ¡Claro! 😁</label>
+					<input type="radio" name="s1" value="si">
+					<label for="s1"> ¡Claro! 😁</label>
 				</li>
 				<li class="c2">
-					<input type="radio" name="s1" value="no"> 
-					<label for="s1-no"> Todavía no… 😉</label>
+					<input type="radio" name="s1" value="no">
+					<label for="s1"> Todavía no… 😉</label>
 				</li>
 			</ul>
 		</div><!-- #screen1 -->
-		
-		<div id="screen2">
+
+		<div id="screen2" class="screen">
 			<h3>Déjame saber de qué, anda… 🤓</h3>
 			<ul class="liveform">
 				<li class="mc1">
-					<input type="radio" name="s2" value="trabajo"> 
-					<label for="s2-trabajo"> Del trabajo</label>
+					<input type="radio" name="s2" value="trabajo">
+					<label for="s2"> Del trabajo</label>
 				</li>
 				<li class="mc2">
-					<input type="radio" name="s2" value="gaming"> 
-					<label for="name"> De algún juego</label>
+					<input type="radio" name="s2" value="gaming">
+					<label for="s2"> De algún juego</label>
 				</li>
 				<li class="mc3">
-					<input type="radio" name="s2" value="redes"> 
-					<label for="name"> De las redes sociales</label>
+					<input type="radio" name="s2" value="redes">
+					<label for="s2"> De las redes sociales</label>
 				</li>
 				<li class="mc4">
-					<input type="radio" name="s2" value="fiesta"> 
-					<label for="name"> De fiesta</label>
+					<input type="radio" name="s2" value="fiesta">
+					<label for="s2"> De fiesta</label>
 				</li>
 				<li class="mc5">
-					<input type="radio" name="s2" value="vida"> 
-					<label for="name"> De la vida</label>
+					<input type="radio" name="s2" value="vida">
+					<label for="s2"> De la vida</label>
 				</li>
 				<li class="mc6">
-					<input type="radio" name="s2" value="nada"> 
-					<label for="name"> ¿De nada?</label>
+					<input type="radio" name="s2" value="nada">
+					<label for="s2"> ¿De nada?</label>
 				</li>
 			</ul>
 		</div><!-- #screen2 -->
-		
+
 	</section>
 
 	<footer id="pie">
@@ -175,6 +175,7 @@ a.icon.youtube:hover { background-position:840px -84px; }
 			</ul>
 		</nav>
 	</footer>
+
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 	<script>
 		jQuery(document).ready(function($){
@@ -184,10 +185,10 @@ a.icon.youtube:hover { background-position:840px -84px; }
 					$('#screen2').show();
 					$('#screen1').hide();
 				}
-				
+
 				if( this.value == 'si' )
 				{
-					$('#screen2').find('h3').text('Bueno, y ¿qué tre trae por aquí?');
+					$('#screen2').find('h3').text('Bueno, y ¿qué te trae por aquí?');
 					$('#screen2').show();
 					$('#screen1').hide();
 				}
