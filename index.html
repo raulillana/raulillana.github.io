@@ -210,13 +210,13 @@ a.icon.youtube:hover { background-position:840px -84px; }
 			/* S1 */
 			$('#s1-no').click(function(ev) {
 				ev.preventDefault();
-				$('#screen2').show();
-				$('#screen1').hide();
+				$('#screen1').slideDown();
+				$('#screen2').slideUp();
 			});
 			$('#s1-si').click(function(ev) {
 				ev.preventDefault();
-				$('#screen3').show();
-				$('#screen1').hide();
+				$('#screen1').slideDown();
+				$('#screen3').slideUp();
 			});
 			/* S2 */
 			/* S3 */
@@ -230,8 +230,8 @@ a.icon.youtube:hover { background-position:840px -84px; }
 
 				if( $('#friendzone').val() == 'maddimans' )
 				{
-					$('#screen4').show();
-					$('#screen3').hide();
+					$('#screen3').slideDown();
+					$('#screen4').slideUp();
 				}
 
 				if( $('#friendzone').val() == '' ) alert('No cuela… 😎');
