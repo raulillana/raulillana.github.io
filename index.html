@@ -78,7 +78,7 @@ a.icon.youtube:hover { background-position:840px -84px; }
 	width: 100%;
 	bottom: 0%;
 	background: white;
-	padding: 25px 50px;
+	padding: 25px 0 50px;
 }
 
 .screen { margin:0 auto; display:none; }
@@ -210,13 +210,13 @@ a.icon.youtube:hover { background-position:840px -84px; }
 			/* S1 */
 			$('#s1-no').click(function(ev) {
 				ev.preventDefault();
-				$('#screen1').slideDown();
-				$('#screen2').slideUp();
+				$('#screen1').slideToggle();
+				$('#screen2').slideToggle();
 			});
 			$('#s1-si').click(function(ev) {
 				ev.preventDefault();
-				$('#screen1').slideDown();
-				$('#screen3').slideUp();
+				$('#screen1').slideToggle();
+				$('#screen3').slideToggle();
 			});
 			/* S2 */
 			/* S3 */
@@ -230,8 +230,8 @@ a.icon.youtube:hover { background-position:840px -84px; }
 
 				if( $('#friendzone').val() == 'maddimans' )
 				{
-					$('#screen3').slideDown();
-					$('#screen4').slideUp();
+					$('#screen3').slideToggle();
+					$('#screen4').slideToggle();
 				}
 
 				if( $('#friendzone').val() == '' ) alert('No cuela… 😎');
