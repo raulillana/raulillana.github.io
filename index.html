@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Raul Illana</title>
 
-	<meta name="description" content="Desarrollador WordPress Barcelona">
+	<meta name="description" content="Desarrollador Web Barcelona">
 	<meta name="author" content="Raul Illana">
 
 <style>
@@ -37,6 +37,8 @@ ul { list-style-type: none; }
 
 #cabecera h1,
 #cabecera p { display:block; position:absolute; left:0; }
+
+#cabecera h2 { position:absolute; width:500px; margin-left:-110px; top:150px; }
 
 #social {}
 #social ul { margin:0; padding:0; }
@@ -73,16 +75,18 @@ a.icon.youtube:hover { background-position:840px -84px; }
 #screen2 { display:none; }
 
 #main {
-    overflow: hidden;
-    clear: both;
-    position: absolute;
-    bottom: 25%;
+	position: absolute;
+	width: 100%;
+	bottom: 0%;
+	background: white;
+	padding: 25px 50px;
 }
 
-.screen { overflow:hidden; clear:both; margin:0 auto; }
+.screen { margin:0 auto;  }
 .screen h3 { text-align:center; }
 .screen label { font-size:2em; }
 /**/
+.liveform { overflow:hidden; clear:both; }
 
 .liveform li.c1,
 .liveform li.mc1,
@@ -95,7 +99,7 @@ a.icon.youtube:hover { background-position:840px -84px; }
 .liveform li.c2 { float:right; }
 
 .liveform li.c1,
-.liveform li.c2 { width:45%; }
+.liveform li.c2 { width:25%; }
 
 .liveform li.mc1,
 .liveform li.mc2,
@@ -103,6 +107,9 @@ a.icon.youtube:hover { background-position:840px -84px; }
 .liveform li.mc4,
 .liveform li.mc5,
 .liveform li.mc6 { width:31%; }
+/**/
+.liveform li.c1 { padding-left:25%; }
+.liveform li.c2 { padding-right:25%; }
 </style>
 
 	<!--<link rel="stylesheet" href="style.css">-->
@@ -113,6 +120,7 @@ a.icon.youtube:hover { background-position:840px -84px; }
 	<header id="cabecera">
 		<img src="http://d13pix9kaak6wt.cloudfront.net/avatar/users/r/a/u/raulillana_1386866985_19.png" alt="raul-illana" title="Raul Illana">
 		<h1><span>Raul</span><span>Illana</span></h1>
+		<h2>Desarrollador Web Barcelona</h2>
 		<!--<p><span class="love">❤</span> Not Only a WordPress Develover <span class="love">❤</span></p>-->
 	</header>
 
@@ -123,7 +131,7 @@ a.icon.youtube:hover { background-position:840px -84px; }
 			<ul class="liveform">
 				<li class="c1">
 					<input type="radio" name="s1" value="si">
-					<label for="s1"> ¡Claro! 😁</label>
+					<label for="s1"> ¡Claro que sí! 😁</label>
 				</li>
 				<li class="c2">
 					<input type="radio" name="s1" value="no">
