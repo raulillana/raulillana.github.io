@@ -1,289 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Raul Illana">
+	<meta name="description" content="WordPress Web Developer">
+
 	<title>Raul Illana</title>
 
-	<meta name="description" content="Desarrollador Web Barcelona">
-	<meta name="author" content="Raul Illana">
-
-<style>
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
-@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
-@font-face { font-family: MOB; src: url('master_of_break.otf') format('opentype'); }
-
-::selection { background:blue; color:white; }
-
-body { font:normal 62.5% 'Helvetica Neue', Helvetica, Verdana, Sans-serif; margin:0; padding:0; }
-body.sexy { background:#e1e1e1; }
-
-h3 { font-weight:normal; font-size:3em; }
-ul { list-style-type: none; }
-
-input[type="text"],
-input[type="password"] {
-	display: block;
-	width: 50%;
-	border-radius: 3px;
-	border: 1px solid transparent;
-	border-top: none;
-	border-bottom: 1px solid #DDD;
-	box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
-	outline: 0;
-	padding: 10px 12px 7px;
-	margin: 0 auto;
-	font-size: 2em;
-}
-
-.love { color:red; }
-
-#cabecera, #surf, #pie { font-size:1em; }
-
-#cabecera { position:absolute; top:25%; left:50%; margin-top:-130px; margin-left:-115px; }
-#cabecera img { border-radius:200px; border:0px solid white; background:white; width:200px; height:250px; padding:0 30px 10px; }
-#cabecera p { width:540px; margin-left:-140px; bottom:-50px; font:bold 3em "Helvetica Neue", Helvetica, Arial, sans-serif; color:#888; }
-#cabecera h1 { width:500px; margin-left:-110px; top:75px; font:bold 10em "MOB", "Helvetica Neue", Helvetica, Arial, sans-serif; color:white;
-	text-shadow:0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1),
-		0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25),
-		0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15); }
-
-#cabecera h1 span:first-child { margin-left:-150px; }
-#cabecera h1 span:last-child { margin-left:400px; }
-
-#cabecera h1,
-#cabecera p { display:block; position:absolute; left:0; }
-
-#cabecera h2 { font:bold 20px Courier, sans-serif; margin-left:-25px; }
-
-#social {}
-#social ul { margin:0; padding:0; }
-#social ul li {}
-#social ul li a { background-image:url('http://4.bp.blogspot.com/-Pe-J5S7YCa0/UdXsJoN7GLI/AAAAAAAAL68/ongZAtcNF1E/s1600/spice-social-gadget-sprite.png'); }
-
-a.icon { display:block; width:84px; height:84px; text-indent:-9999em; animation:background 1s linear;  }
-
-a.icon.facebook { background-position:0 0; }
-a.icon.flickr { background-position:84px 0; }
-a.icon.dribble { background-position:168px 0; }
-a.icon.twitter { background-position:252px 0; }
-a.icon.skype { background-position:336px 0; }
-a.icon.pinterest { background-position:420px 0; }
-a.icon.rss { background-position:504px 0; }
-a.icon.linkedin { background-position:588px 0; }
-a.icon.googleplus { background-position:672px 0; }
-a.icon.vimeo { background-position:756px 0; }
-a.icon.youtube { background-position:840px 0; }
-
-a.icon.facebook:hover { background-position:0 -84px; }
-a.icon.flickr:hover { background-position:84px -84px; }
-a.icon.dribble:hover { background-position:168px -84px; }
-a.icon.twitter:hover { background-position:252px -84px; }
-a.icon.skype:hover { background-position:336px -84px; }
-a.icon.pinterest:hover { background-position:420px -84px; }
-a.icon.rss:hover { background-position:504px -84px; }
-a.icon.linkedin:hover { background-position:588px -84px; }
-a.icon.googleplus:hover { background-position:672px -84px; }
-a.icon.vimeo:hover { background-position:756px -84px; }
-a.icon.youtube:hover { background-position:840px -84px; }
-
-/**/
-
-#main {
-	position: absolute;
-	width: 100%;
-	bottom: 0%;
-	background: white;
-	padding: 25px 0 50px;
-}
-
-.screen { margin:0 auto; display:none; }
-.screen h3 { text-align:center; }
-.screen p { font:normal 1.6em Courier, sans-serif; }
-.screen a { text-decoration:none; font-size:2em; }
-
-#screen1 { display:block; }
-
-#screen2 .liveform li { text-align:center; padding:10px; }
-
-#screen2,
-#screen3,
-#screen4 { display:none; }
-/**/
-.liveform { overflow:hidden; clear:both; width:100%; padding:0; margin:0 auto; }
-
-.liveform li.v1,
-.liveform li.c1,
-.liveform li.mc1,
-.liveform li.mc2,
-.liveform li.mc3,
-.liveform li.mc4,
-.liveform li.mc5,
-.liveform li.mc6 { float:left; }
-
-.liveform li.v1,
-.liveform li.c1 { text-align:right; }
-
-.liveform li.c2,
-.liveform li.v2 { float:right; }
-
-.liveform li.c1,
-.liveform li.c2 { width:45%; }
-
-.liveform li.v1 { width:50%; }
-.liveform li.v2 { width:40%; }
-
-.liveform li.mc1,
-.liveform li.mc2,
-.liveform li.mc3,
-.liveform li.mc4,
-.liveform li.mc5,
-.liveform li.mc6 { width:31%; }
-/**/
-#screen2 li a:before {
-	margin-right:5px;
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-#s2-trabajo:before { content: '\f19a'; }
-#s2-fiesta:before{ content: '\f000'; }
-
-#s2-juegos:before{ content: '\f11b'; }
-#s2-redes:before{ content: '\f1e0'; }
-#s2-nada:before{ content: '\f06e'; }
-#s2-vida:before{ content: '\f004'; }
-/**/
-</style>
-
-	<!--<link rel="stylesheet" href="style.css">-->
-	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="avatar_raul_illana.jpg" type="image/x-icon">
 </head>
 
-<body class="sexy">
+<body>
 	<header id="cabecera">
-		<img src="http://d13pix9kaak6wt.cloudfront.net/avatar/users/r/a/u/raulillana_1386866985_19.png" alt="raul-illana" title="Raul Illana">
+		<img src="avatar_raul_illana.jpg" alt="raul-illana" title="Raul Illana">
 		<h1><span>Raul</span><span>Illana</span></h1>
-		<h2>Desarrollador Web Barcelona</h2>
-		<!--<p><span class="love">❤</span> Not Only a WordPress Develover <span class="love">❤</span></p>-->
 	</header>
 
-	<section id="main">
-
-		<div id="screen1" class="screen">
-			<h3><strong>¡Hola!</strong> ☺️ ¿Nos conocemos?</h3>
-
-			<ul class="liveform">
-				<li class="c1"><a id="s1-si" href="#">¡Claro que sí! 😁</a></li>
-				<li class="c2"><a id="s1-no" href="#">Todavía no… 😉</a></li>
-			</ul>
-		</div><!-- #screen1 -->
-
-		<div id="screen2" class="screen">
-			<h3>Bueno, y ¿qué te trae por aquí?</h3>
-
-			<ul class="liveform">
-				<li class="mc1">
-					<a id="s2-trabajo" href="#">Del trabajo</a>
-				</li>
-				<li class="mc2">
-					<a id="s2-juegos" href="#">De algún juego</a>
-				</li>
-				<li class="mc3">
-					<a id="s2-redes" href="#">De las redes sociales</a>
-				</li>
-				<li class="mc4">
-					<a id="s2-fiesta" href="#">De fiesta</a>
-				</li>
-				<li class="mc5">
-					<a id="s2-nada" href="#">De nada concreto</a>
-				</li>
-				<li class="mc6">
-					<a id="s2-vida" href="#">De la vida o el amor</a>
-				</li>
-			</ul>
-		</div><!-- #screen2 -->
-
-		<div id="screen3" class="screen">
-			<h3>¿Ah sí? Entonces ya sabes qué poner aquí… 😁</h3>
-
-			<form name="friendzone-form" action="" method="POST">
-				<ul class="liveform">
-					<li class="full">
-						<input id="friendzone" type="password" name="friendzone" placeholder="lalalala…">
-					</li>
-				</ul>
-			</form>
-		</div><!-- #screen3 -->
-
-		<div id="screen4" class="screen">
-			<h3>🤣 …PUTO <strong>RAMAN</strong>… 🤣 HOLA PRESIOSO 🤣</h3>
-
-			<ul class="liveform">
-				<li class="v1">
-					<iframe width="560" height="315" src="http://www.youtube.com/embed/qjazkgtcrms" frameborder="0" allowfullscreen></iframe>
-				</li>
-				<li class="v2">
-					<p>Maddimans, Maddimans, necesita volar.</p>
-					<p>Maddimans, Maddimans, te quiere violar.</p>
-					<p>Maddimans, Maddimans, no se volverá a casar.</p>
-					<p>Maddimans, Maddimans, en tu casa quiere estar.</p>
-				</li>
-			</ul>
-		</div><!-- #screen4 -->
-
+	<section id="contact">
+		<nav><ul>
+			<li><a target="_blank" href="tel:+34690823845" title="Phone"><i class="fa fa-phone"></i></a></li>
+			<li><a class="whatsapp" target="_blank" href="https://wa.me/+34690823845" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+		</ul></nav>
 	</section>
 
 	<footer id="pie">
-		<nav id="social">
-			<ul>
-				<li><a class="icon twitter" href="http://twitter.com/raulillana" title="Twitter">Twitter</a></li>
-				<li><a class="icon facebook" href="http://fb.com/raulillana" title="Facebook">Facebook</a></li>
-				<li><a class="icon linkedin" href="http://www.linkedin.com/in/raulillana" title="LinkedIn">LinkedIn</a></li>
-				<li><a class="icon googleplus" href="http://plus.google.com/+RaulIllana" title="Google+">Google+</a></li>
-				<li><a class="icon youtube" href="http://youtube.com/raulillana" title="YouTube">YouTube</a></li>
-			</ul>
-		</nav>
+		<nav><ul>
+			<li><a target="_blank" href="https://twitter.com/raulillana" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+			<li><a class="linkedin" target="_blank" href="https://linkedin.com/in/raulillana" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+			<li><a target="_blank" href="https://github.com/raulillana" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+			<li><a class="instagram" target="_blank" href="https://instagram.com/raulillana" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+		</ul></nav>
 	</footer>
 
-	<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<script>
-		jQuery(document).ready(function($){
-			/* S1 */
-			$('#s1-no').click(function(ev) {
-				ev.preventDefault();
-				$('#screen1').slideToggle('slow', function(){ $('#screen2').slideToggle('slow'); });
-			});
-			$('#s1-si').click(function(ev) {
-				ev.preventDefault();
-				$('#screen1').slideToggle('slow', function(){ $('#screen3').slideToggle('slow'); });
-			});
-			/* S2 */
-			$('#s2-nada').click(function(ev){
-				ev.preventDefault();
-
-				alert('Igual deberías empezar el stalkeo por aquí…');
-
-				window.location.replace('http://raulillana.com/');
-			});
-			/* S3 */
-			$('#s3-sub').click(function(ev){
-				ev.preventDefault();
-
-				switch( $('#friendzone').val() )
-				{
-					case 'Mercenari0' : window.location.replace('http://wpmercs.com/'); break;
-					case 'maddimans'  : $('#screen3').slideToggle('slow', function(){ $('#screen4').slideToggle('slow'); }); break;
-
-					case 'tequiero'   : alert('Y yo a ti. 😍');
-					case '' : default : alert('No cuela… 😎');
-				}
-
-			});
-		});
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Person",
+			"name": "Raul F. Illana",
+			"url": "https://raulillana.github.io/",
+			"jobTitle": "WordPress Web Developer",
+			"gender": "male",
+			"image": "avatar_raul_illana.jpg",
+			"sameAs": [
+				"https://linkedin.com/in/raulillana",
+				"https://twitter.com/raulillana",
+				"https://instagram.com/raulillana",
+				"https://wpmercs.com",
+				"https://raulillana.com",
+			]
+		}
 	</script>
 </body>
 </html>
