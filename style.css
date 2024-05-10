@@ -27,10 +27,6 @@ ul {
 	list-style-type: none;
 }
 
-#cabecera, #contact, #pie {
-	font-size: 1rem;
-}
-
 #contact, #pie {
 	position: absolute;
 	bottom: 0;
@@ -79,8 +75,16 @@ ul {
 					}
 				}
 
+				&.wordpress {
+					background: #21759b;
+
+					&:hover {
+						background: #d54e21;
+					}
+				}
+
 				i {
-					font-size: 2rem;
+					font-size: 3rem;
 				}
 			}
 		}
@@ -89,6 +93,10 @@ ul {
 
 #contact {
 	top: 0;
+
+	ul li a i {
+		font-size: 5rem;
+	}
 }
 
 #cabecera {
