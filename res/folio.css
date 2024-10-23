@@ -1,0 +1,16 @@
+:root {
+    --primary: #1095c1;
+    --primary-hover: #08769c;
+}
+
+body {
+    padding: 2rem;
+}
+
+.grid {
+    article {
+        padding: 1.5rem;
+        border-radius: 8px;
+        background-color: var(--card);
+    }
+}
