@@ -1,6 +1,8 @@
-:root {
-    --primary: #1095c1;
-    --primary-hover: #08769c;
+:root:not([data-theme=light]) {
+    --primary: whitesmoke;
+    --primary-hover: white;
+    --card: #141e26;
+    --card-hover: rgba(0,0,0, .5);
 }
 
 body {
@@ -8,9 +10,55 @@ body {
 }
 
 .grid {
-    article {
-        padding: 1.5rem;
-        border-radius: 8px;
-        background-color: var(--card);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 450px), 1fr)) !important;
+}
+
+.grid article {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: var(--card);
+
+    &:hover {
+        background-color: var(--card-hover);
+    }
+}
+
+.grid article h2 {
+    margin: 0;
+}
+
+.grid article h2 a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.grid article h2 a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 1rem 0 0;
+    text-transform: capitalize;
+
+    &.agency {
+        background-color: tomato;
+        color: white;
+    }
+
+    &.freelance {
+        background-color: teal;
+        color: white;
+    }
+
+    &.personal {
+        background-color: cornflowerblue;
+        color: white;
     }
 }
