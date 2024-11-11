@@ -9,15 +9,24 @@ const getDomainFromUrl = (url) => {
 
 const createArticle = (data) => {
     const article = document.createElement('article');
+    const domain = getDomainFromUrl(data.url);
+    
+    // Create image container with fixed aspect ratio (800/600 = 1.33)
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'image-container';
+    imageContainer.style.paddingBottom = '133.33%';
     
     const thumbnail = document.createElement('img');
     thumbnail.alt = data.url;
     thumbnail.loading = 'lazy';
-    thumbnail.style.width = '100%';
-    thumbnail.style.height = 'auto';
-    thumbnail.style.borderRadius = '4px';
-    const domain = getDomainFromUrl(data.url);
-    thumbnail.src = `res/imgs/${domain}.png`;
+    thumbnail.dataset.src = `res/imgs/${domain}.png`;
+    
+    // Add load event listener
+    thumbnail.addEventListener('load', () => {
+        thumbnail.classList.add('loaded');
+    });
+    
+    imageContainer.appendChild(thumbnail);
     
     const type = document.createElement('span');
     type.textContent = data.type;
@@ -26,20 +35,36 @@ const createArticle = (data) => {
     const title = document.createElement('h2');
     const titleLink = document.createElement('a');
     titleLink.href = data.url;
-    titleLink.textContent = getDomainFromUrl(data.url);
+    titleLink.textContent = domain;
     titleLink.target = '_blank';
     titleLink.rel = 'noopener noreferrer';
     title.appendChild(titleLink);
     
-    article.appendChild(thumbnail);
+    article.appendChild(imageContainer);
     article.appendChild(type);
     article.appendChild(title);
     
     return article;
 };
 
+const observeImages = () => {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+};
+
 // Deprecated projects:
-//{ type: "AGENCY", url: "https://socialistes.cat" },
+//{ type: "FREELANCE", url: "https://socialistes.cat" },
 
 const projects = [
     { type: "PERSONAL", url: "https://embotellador.es" },
@@ -140,6 +165,9 @@ const loadFolio = () => {
             const article = createArticle(project);
             grid.appendChild(article);
         });
+        
+        // Start observing images for lazy loading
+        observeImages();
     } catch (error) {
         console.error('Error loading folio:', error);
     }

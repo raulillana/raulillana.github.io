@@ -27,6 +27,40 @@ body>footer, body>header, body>main, section {
     }
 }
 
+.grid article .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--card-hover);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.grid article .image-container::before {
+    content: "";
+    display: block;
+    width: 100%;
+    /* Fixed 500x300 aspect ratio (300/500 = 0.6 = 60%) */
+    padding-bottom: 60%;
+}
+
+.grid article img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid article img.loaded {
+    opacity: 1;
+}
+
 .grid article h2 {
     margin: 0;
 }

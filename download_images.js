@@ -22,7 +22,8 @@ const getDomainFromUrl = (url) => {
 // Function to download image
 const downloadImage = async (url) => {
     const domain = getDomainFromUrl(url);
-    const thumbUrl = `https://image.thum.io/get/width/600/crop/800/viewportWidth/1200/png/${url}`;
+    // Using exact 500x300 dimensions
+    const thumbUrl = `https://image.thum.io/get/width/500/height/300/png/${url}`;
     const filePath = path.join(imgsDir, `${domain}.png`);
     
     console.log(`Downloading ${domain}...`);
