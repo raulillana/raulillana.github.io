@@ -14,7 +14,7 @@ const createArticle = (data) => {
     // Create image container with fixed aspect ratio (800/600 = 1.33)
     const imageContainer = document.createElement('div');
     imageContainer.className = 'image-container';
-    imageContainer.style.paddingBottom = '133.33%';
+    imageContainer.style.paddingBottom = '33.33%';
     
     const thumbnail = document.createElement('img');
     thumbnail.alt = data.url;
