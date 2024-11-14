@@ -14,7 +14,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100dvh;
-	background: #e1e1e1;
+	background: #d7d6d4;
 	font: normal 62.5% 'Helvetica Neue', Helvetica, Verdana, Sans-serif;
 }
 
@@ -43,6 +43,22 @@ ul {
 			margin: .1rem;
 			flex-direction: row;
 
+			&.folio {
+				min-width: 40%;
+				position: relative;
+				margin-bottom: -2rem;
+
+				&:after {
+					display: block;
+					width: 100%;
+					position: absolute;
+					bottom: -2.5rem;
+					left: 1rem;
+					content: 'New portfolio! ⤴';
+					color: rebeccapurple;
+					font: normal 1.4rem 'Brush Script MT', cursive;
+				}
+			}
 
 			a {
 				flex: 1;
@@ -80,6 +96,15 @@ ul {
 
 					&:hover {
 						background: #d54e21;
+					}
+				}
+
+				&.portfolio {
+					border-radius: 0 0 1rem 1rem;
+					background: #4B0082;
+
+					&:hover {
+						background: #663399;
 					}
 				}
 
@@ -159,6 +184,18 @@ ul {
 					padding-left: 20rem;
 				}
 			}
+		}
+	}
+
+	#contact ul li.folio {
+		min-width: 35%;
+
+		&:after {
+			left: 25%;
+		}
+
+		i {
+			font-size: 7.5rem;
 		}
 	}
 
