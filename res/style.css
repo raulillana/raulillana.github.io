@@ -48,16 +48,16 @@ ul {
 				position: relative;
 				margin-bottom: -2rem;
 
-				&:after {
+				/*&:after {
 					display: block;
 					width: 100%;
 					position: absolute;
-					bottom: -2.5rem;
+					bottom: 1rem;
 					left: 1rem;
 					content: 'New portfolio! ⤴';
-					color: rebeccapurple;
-					font: normal 1.4rem 'Brush Script MT', cursive;
-				}
+					color: white;
+					font: 300 1.4rem 'Brush Script MT', cursive;
+				}*/
 			}
 
 			a {
